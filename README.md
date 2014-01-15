@@ -25,14 +25,41 @@ ________________________________________________
 Now, answer these questions:
 
 1. What is Sinatra? Where does it run?
+Sinatra: open source web application written in Ruby
+Sinatra: runs on a local host
 
 2. What is a Gemfile? How do you use it in your Sinatra Application? Give step by step instructions.
 
+Gemfile: lists gem dependencies
+Gemfile: require the necessary gems for application.
+
+# Gemfile 
+source 'https://rubygems.org'
+
+gem 'sinatra' # for sinatra
+gem 'activerecord' #ORM
+gem 'sqlite3' #place where the database is stored
+gem 'haml' #how we write html and ruby
+gem 'activerecord' #ORM (i accidentally required it twice in panic mode.)
+gem 'sinatra-activerecord' #sinatra based active record 
+gem 'rake'
+
+group :development do 
+  gem "shotgun" #to run the local host
+  gem "tux"
+end 
+
 3. What is an ORM? What are the basic features of an ORM? Why is it helpful?
+ORM: object relational mapping 
+allows us to store data that we can use with our web browser
 
 4. What is the public folder? What do we use it for?
 
+Public folder serves as a place to store images and styling files. 
+
 5. What is REST? Why is it useful?
+
+REST stands for Representational State Transfer and was introduced by Roy Fielding in his doctoral dissertation in 2000. It is basically a way of accessing resources (these are usually objects in a database) with specific urls
 
 6. Suppose I, with my browser, send an HTTP get request to the route that will render the view of all the SpaceCats. Walk me through step by step how your application handles that request. 
 
@@ -42,18 +69,18 @@ Now, answer these questions:
    The rest of the assesment all will take place in the wizards db.
  
 2. Create a table called wizards with the following columns (name, age).
- 
+
+CREATE TABLE wizards
+
 3. Write a statement to count the number of rows in the wizards table.  How many wizards are there?
  
 4. Insert a wizard into the database.
  
 5. Write a statement to count the number of rows in the wizards table.  How many wizards are there now?
- 
+
 6. Insert another wizard into the database.
- 
+
 7. Write a statement to change the second wizards age to 21.
- 
-8. Write a statement to change all wizards ages to 40.
  
 9. Write a statement to delete the last wizard.
  
