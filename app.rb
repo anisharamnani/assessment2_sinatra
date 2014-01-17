@@ -3,8 +3,6 @@
 require 'bundler'
 Bundler.require
 require './lib/spacecat.rb'
-require 'sinatra'
-require 'sinatra/activerecord'
 
 class App < Sinatra::Application
 	set :database, "sqlite3:///spacecats.db"
