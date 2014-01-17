@@ -28,6 +28,7 @@ Now, answer these questions:
 Sinatra: open source web application written in Ruby
 Sinatra: runs on a local host
 
+-runs on a server =] 
 2. What is a Gemfile? How do you use it in your Sinatra Application? Give step by step instructions.
 
 Gemfile: lists gem dependencies
@@ -57,11 +58,18 @@ allows us to store data that we can use with our web browser
 
 Public folder serves as a place to store images and styling files. 
 
+Public folder is for the things the client side will need, such as images, css, js and webfonts.
+-for static assets,
+-accessible to browser 
+-don't need to define route
+
 5. What is REST? Why is it useful?
 
 REST stands for Representational State Transfer and was introduced by Roy Fielding in his doctoral dissertation in 2000. It is basically a way of accessing resources (these are usually objects in a database) with specific urls
 
-6. Suppose I, with my browser, send an HTTP get request to the route that will render the view of all the SpaceCats. Walk me through step by step how your application handles that request. 
+6. Suppose I, with my browser, send an HTTP get request to the route that will render the view of all the SpaceCats. Walk me through step by step how your application handles that request.
+
+browser > app > model > db > model > view > app > browser  
 
 ##PART 2: SQL 
  
